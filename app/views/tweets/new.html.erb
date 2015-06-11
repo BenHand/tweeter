@@ -1,0 +1,5 @@
+<h2>new user/comment page</h2>
+    <%= form_for(:tweets, url: "/tweets", method: :post) do |f| %>
+      <div><%= f.text_area :message, :cols => "100", :rows => "20"%></div>
+      <p><%= f.submit "POST" %></p>
+    <% end %>

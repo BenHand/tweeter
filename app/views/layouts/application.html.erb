@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <nav>
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'All Tweets', tweets_path %>
+    <%= link_to 'New Tweet', new_user_path %>
+    <%= link_to 'Search', root_path %>
+  </nav>
+</header>
 
 <%= yield %>
-
+<footer><%= params.inspect %></footer>
 </body>
 </html>

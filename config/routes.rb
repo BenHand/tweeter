@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :tweet
-  resources :user
+  resources :tweets
+  resources :users
+  get '/search', to: 'user#search'
+  root to: 'users#index'
 end
